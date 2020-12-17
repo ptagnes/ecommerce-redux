@@ -5,6 +5,8 @@ import { toggleItemsGrid, sortItems } from "../../redux/actions/itemsActions";
 import { Grid, List } from "react-bootstrap-icons";
 import Form from "react-bootstrap/Form";
 import { Filter } from "react-bootstrap-icons";
+import ItemsFilter from "./ItemsFilter";
+import { CSSTransition } from "react-transition-group";
 
 function ItemsHeader({
   toggleItemsGrid,
@@ -17,14 +19,7 @@ function ItemsHeader({
   itemCount: number;
   items: any;
 }) {
-  console.log("items from items header");
-  console.log(items);
-  Object.values(items).forEach((key) => {
-    const lkj: any = key;
-    Object.keys(lkj).forEach((item) => {
-      console.log(item);
-    });
-  });
+  const [filterShow, setFilterShow] = React.useState(false);
   const [grid, setGrid] = React.useState<{ grid: boolean }>({
     grid: true,
   });
@@ -42,7 +37,10 @@ function ItemsHeader({
     <header className="border-bottom mb-4 pb-3">
       <div className="form-inline">
         <span className="mr-md-auto">{itemCount} Items found </span>
-        <div style={{ marginRight: "20px" }}>
+        <div
+          style={{ margin: "0 20px", cursor: "pointer", color: "#007bff" }}
+          onClick={() => setFilterShow(!filterShow)}
+        >
           Filter <Filter />
         </div>
         <Form style={{ marginRight: "10px" }}>
@@ -85,6 +83,15 @@ function ItemsHeader({
           </span>
         </div>
       </div>
+      {/* {filterShow && <ItemsFilter items={items} />  } */}
+      <CSSTransition
+        in={filterShow}
+        timeout={600}
+        classNames="show-filter"
+        unmountOnExit
+      >
+        <ItemsFilter items={items} closeFilter={setFilterShow} />
+      </CSSTransition>
     </header>
   );
 }

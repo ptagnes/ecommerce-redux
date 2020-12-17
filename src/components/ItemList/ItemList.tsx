@@ -52,8 +52,6 @@ function ItemList({
                     imageUrl={item.imageUrl}
                     name={item.name}
                     description={item.description}
-                    //http://localhost:3000/details/electronics/electronicsproducts/monitors/9
-                    // link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
                     link={`/details${item.route}`}
                     price={item.price}
                     badgeText="NEW"

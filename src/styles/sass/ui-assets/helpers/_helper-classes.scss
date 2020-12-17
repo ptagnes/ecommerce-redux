@@ -19,6 +19,62 @@ a {
     padding-right: 15px !important;
   }
 }
+.filter-container {
+  .closefilter {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: white;
+    height: 100vh;
+    padding: 1rem;
+    position: fixed;
+    .closefilter {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      background: #77b6fa;
+      color: white;
+      border-radius: 100px;
+      height: 30px;
+      line-height: 23px;
+      padding: 0;
+      width: 30px;
+      text-align: center;
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+.filter-container-inner {
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+}
+.show-filter-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  height: 0;
+}
+.show-filter-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  height: auto;
+  transition: opacity 200ms, height 400ms, transform 300ms;
+}
+.show-filter-exit {
+  opacity: 1;
+}
+.show-filter-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  height: 0;
+  transition: opacity 100ms, height 400ms, transform 300ms;
+}
+
 .img-wrap {
   text-align: center;
   display: block;
