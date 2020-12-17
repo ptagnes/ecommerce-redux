@@ -1,0 +1,62 @@
+.catNav {
+  // .card-header {
+  //   // background-color: #3167eba8;
+  // }
+  &.card {
+    background: transparent;
+    border: none;
+  }
+  .card-header {
+    padding: 1rem;
+    display: block;
+  }
+}
+.catNav0 {
+  a {
+    color: #9ca2a9;
+    &:hover {
+      color: #828385;
+    }
+  }
+  &.card {
+    border: none;
+  }
+}
+.catNav1 {
+  &.card-body {
+    padding: 0;
+  }
+  .card {
+    border: none;
+    background-color: #3167eb14;
+    border-radius: 0;
+  }
+}
+.catNav2,
+.catNav3 {
+  &.card-body {
+    padding: 0;
+  }
+}
+.catNav3 {
+  .catNav-elem {
+    padding: 0.4rem 1rem;
+    border-bottom: 1px solid #d2d6da;
+  }
+}
+.active.card-header {
+  background-color: #ffc107;
+}
+@media (max-width: 768px) {
+  .catNav {
+    .card-head {
+      display: none;
+    }
+    .search-header {
+      display: none;
+    }
+    .card-body.search-body {
+      padding: 20px 0 5px 0;
+    }
+  }
+}

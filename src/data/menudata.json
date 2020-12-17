@@ -1,0 +1,59 @@
+[{
+  "menu": [
+    {
+      "name": "Fisk & Skaldjur",
+      "link": "link",
+      "class": "icon-ambientais fs1 icon menu-button",
+      "test": {"tests": "lkjlkj"},
+      "subm": [
+        {
+          "name": "SubMenuTitle1",
+          "link": "link",
+          "class": "icon-ambientais fs1",
+          "submenu": [
+            {
+              "name": "SubMenu1",
+              "routerlink": "/link/Qld"
+            },
+            {
+              "name": "SubMenu2",
+              "routerlink": "/link/eQld"
+            },
+            {
+              "name": "SubMenu3",
+              "routerlink": "/link/aQld"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ost, Mejeri & Ägg",
+      "link": "link",
+      "class": "icon-ambientais fs1 icon menu-button",
+      "test": {"tests2": "lkjlkj"},
+      "subm": [
+        {
+          "name": "SubMenuTitle2",
+          "link": "link",
+          "class": "icon-ambientais fs1",
+          "submenu": [
+            {
+              "name": "SubMenu1",
+              "routerlink": "/link/Qld"
+            },
+            {
+              "name": "SubMenu2",
+              "routerlink": "/link/eQld"
+            },
+            {
+              "name": "SubMenu3",
+              "routerlink": "/link/aQld"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
