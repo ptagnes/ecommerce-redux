@@ -4,7 +4,7 @@ import { Figure } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 
 function ItemViewGrid(props: any) {
-  const { imageUrl, name, description, link, price, badgeText, grid } = props;
+  const { imageUrl, name, description, link, price, badgeText } = props;
   return (
     <Figure className="card card-product-grid">
       <div className="img-wrap">
@@ -28,7 +28,8 @@ function ItemViewGrid(props: any) {
   );
 }
 function ItemViewList(props: any) {
-  const { imageUrl, name, description, link, price, badgeText, grid } = props;
+  // const { imageUrl, name, description, link, price, badgeText, grid } = props;
+  const { imageUrl, description, badgeText } = props;
   return (
     <article className="card card-product-list">
       <div className="row no-gutters">
@@ -72,7 +73,7 @@ function ItemViewList(props: any) {
 }
 
 function ItemView(props: any) {
-  const { imageUrl, name, description, link, price, badgeText, grid } = props;
+  const { grid } = props;
   return (
     <>{grid ? <ItemViewGrid {...props} /> : <ItemViewList {...props} />}</>
   );

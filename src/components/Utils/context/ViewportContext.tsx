@@ -10,8 +10,6 @@ export const ViewportProvider = ({ children }: { children: any }) => {
     setHeight(window.innerHeight);
   };
   React.useEffect(() => {
-    console.log("width");
-    console.log(width);
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);

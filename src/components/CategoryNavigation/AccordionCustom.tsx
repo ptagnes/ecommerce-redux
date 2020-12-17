@@ -4,7 +4,7 @@ import { Accordion, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AccordionCustom2 from "./AccordionCustom2";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 function AccordionCustom({
   item,
@@ -22,7 +22,7 @@ function AccordionCustom({
     setCurrentActiveKey(currentActiveKey === key ? null : key);
   };
   //className={currentActiveKey === k ? clName : ""}
-  const topCat = item.productList.name;
+  // const topCat = item.productList.name;
   //defaultActiveKey="0"
   const rname = item.routeName;
   return (

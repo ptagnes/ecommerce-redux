@@ -40,7 +40,11 @@ function ShoppingCart(props: any) {
                       <td>
                         <figure className="itemside">
                           <div className="aside">
-                            <img src={cartItem.imageUrl} className="img-sm" />
+                            <img
+                              src={cartItem.imageUrl}
+                              className="img-sm"
+                              alt="product-image"
+                            />
                           </div>
                           <figcaption className="info">
                             <Link className="title text-dark" to={`/`}>
@@ -141,7 +145,7 @@ function ShoppingCart(props: any) {
                 </dl>
                 <hr />
                 <p className="text-center mb-3">
-                  <img src={img} height="26" width="100" />
+                  <img src={img} height="26" width="100" alt="payment" />
                 </p>
               </div>
             </div>

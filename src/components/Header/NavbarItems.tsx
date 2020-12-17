@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import Navbar from "react-bootstrap/Navbar";
+// import Nav from "react-bootstrap/Nav";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import img from "../../styles/sass/ui-assets/images/logo.png";
@@ -20,7 +20,7 @@ function NavbarItems({ cartItemsTotal }: { cartItemsTotal: number }) {
             <div className="row align-items-center">
               <div className="col-lg-2 col-4">
                 <a href="/" className="brand-wrap">
-                  <img className="logo" src={img} />
+                  <img className="logo" src={img} alt="logo" />
                 </a>
               </div>
 
@@ -45,8 +45,7 @@ function NavbarItems({ cartItemsTotal }: { cartItemsTotal: number }) {
                   </div>
 
                   <div className="widget-header dropdown">
-                    <a
-                      href="#"
+                    <span
                       className="ml-3 icontext"
                       data-toggle="dropdown"
                       data-offset="20,10"
@@ -61,7 +60,7 @@ function NavbarItems({ cartItemsTotal }: { cartItemsTotal: number }) {
                           My account <CaretDown />
                         </span>
                       </div>
-                    </a>
+                    </span>
                     <div className="dropdown-menu dropdown-menu-right">
                       <Form className="px-4 py-3">
                         <Form.Group controlId="formBasicEmail">

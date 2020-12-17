@@ -23,7 +23,9 @@ export const searchItemsMemoized = createSelector([selectItems], (items) => {
             return t.name.toLowerCase().includes(searchVal);
           });
           arr.push(filtered);
+          return "";
         });
+        return "";
       });
     }
   }
@@ -85,8 +87,10 @@ export const selectProduct = (
             });
             result = xklj;
           }
+          return "";
         });
       }
+      return "";
     });
     return result;
   });
