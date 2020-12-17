@@ -19,6 +19,7 @@ function ShoppingCart(props: any) {
   const cartItems = props.cartItems;
   const removeItem = props.removeItem;
   const total = props.total;
+  console.log(cartItems);
 
   return (
     <section className="section-content padding-y">
@@ -55,10 +56,7 @@ function ShoppingCart(props: any) {
                       </td>
                       <td>
                         <select className="form-control">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
+                          <option>{cartItem.quantity}</option>
                         </select>
                       </td>
                       <td>
@@ -128,7 +126,9 @@ function ShoppingCart(props: any) {
               <div className="card-body">
                 <dl className="dlist-align">
                   <dt>Total price:</dt>
-                  <dd className="text-right">USD {total}</dd>
+                  <dd className="text-right">
+                    USD {Math.round((total + Number.EPSILON) * 100) / 100}
+                  </dd>
                 </dl>
                 {/* <dl className="dlist-align">
                   <dt>Discount:</dt>
@@ -137,7 +137,9 @@ function ShoppingCart(props: any) {
                 <dl className="dlist-align">
                   <dt>Total:</dt>
                   <dd className="text-right  h5">
-                    <strong>${total}</strong>
+                    <strong>
+                      ${Math.round((total + Number.EPSILON) * 100) / 100}
+                    </strong>
                   </dd>
                 </dl>
                 <hr />

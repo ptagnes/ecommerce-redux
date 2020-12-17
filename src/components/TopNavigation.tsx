@@ -9,7 +9,6 @@ import Search from "./Search";
 function TopNavigation({ categories }: { categories: any }) {
   return (
     <div className="card catNav">
-      <div className="card-head">SORTIMENT</div>
       <article className="filter-group">
         <header className="card-header search-header">
           <div style={{ display: "flex" }}>

@@ -32,7 +32,7 @@ function ItemList({
   const itm = sortedItems.length > 0 ? sortedItems : items;
   const currentPosts = itm.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
-
+  console.log(itm.route);
   return (
     // <Layout>
     <Container fluid>
@@ -54,7 +54,7 @@ function ItemList({
                     description={item.description}
                     //http://localhost:3000/details/electronics/electronicsproducts/monitors/9
                     // link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
-                    link={`/details/`}
+                    link={`/details${item.route}`}
                     price={item.price}
                     badgeText="NEW"
                     grid={grid}

@@ -32,6 +32,7 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/mensouter/100008",
               onSale: "yes",
             },
             {
@@ -45,6 +46,7 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/mensouter/1143986",
               onSale: "no",
             },
             {
@@ -59,6 +61,7 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/mensouter/19886",
               onSale: "no",
             },
             {
@@ -72,7 +75,8 @@ const PRODUCT_DATA = {
               sizes: ["xs, s, m, l"],
               colors: ["black, white"],
               inStock: "yes",
-              brand: "superbrand",
+              brand: "Gucci",
+              route: "/fashion/mens/mensouter/146386",
               onSale: "no",
             },
           ],
@@ -99,6 +103,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, red"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/menssports/15840",
               onSale: "no",
             },
             {
@@ -113,6 +118,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, gray, green"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/menssports/115555",
               onSale: "no",
             },
             {
@@ -127,6 +133,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, blue"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/menssports/16785",
               onSale: "no",
             },
           ],
@@ -144,11 +151,12 @@ const PRODUCT_DATA = {
               id: 18540008,
               name: "Levi Jeans",
               imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+              routeName: "levisjeans",
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               subitems: [
                 {
-                  id: 100008,
+                  id: 1340008,
                   name: "Tight Levi Jeans",
                   imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
                   description:
@@ -158,6 +166,7 @@ const PRODUCT_DATA = {
                   colors: ["black, white"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route: "/fashion/mens/mensleasure/levisjeans/1340008",
                   onSale: "yes",
                 },
                 {
@@ -171,6 +180,7 @@ const PRODUCT_DATA = {
                   colors: ["black, white, green"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route: "/fashion/mens/mensleasure/levisjeans/1143986",
                   onSale: "no",
                 },
               ],
@@ -186,6 +196,7 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/mens/mensleasure/778143986",
               onSale: "no",
             },
           ],
@@ -215,7 +226,7 @@ const PRODUCT_DATA = {
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           items: [
             {
-              id: 100008,
+              id: 10032342228,
               name: "Leather Moto Biker Jacket",
               imageUrl:
                 "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
@@ -226,10 +237,11 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womensouter/10032342228",
               onSale: "no",
             },
             {
-              id: 1143986,
+              id: 10492382834234,
               name: "Rain Jacket Women Windbreaker",
               imageUrl:
                 "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
@@ -240,6 +252,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, silver"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womensouter/10492382834234",
               onSale: "no",
             },
           ],
@@ -266,6 +279,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, brown"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womenssports/15840",
               onSale: "no",
             },
             {
@@ -280,6 +294,7 @@ const PRODUCT_DATA = {
               colors: ["black, white"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womenssports/115555",
               onSale: "yes",
             },
           ],
@@ -304,6 +319,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, gold"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womensleasure/18540008",
               onSale: "no",
             },
             {
@@ -317,6 +333,7 @@ const PRODUCT_DATA = {
               colors: ["black, white, yellow"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/fashion/womens/womensleasure/778143986",
               onSale: "no",
             },
           ],
@@ -368,6 +385,7 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route: "/jewellery/jewelleryproducts/rings/goldrings/13008",
                   onSale: "no",
                 },
                 {
@@ -382,6 +400,7 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route: "/jewellery/jewelleryproducts/rings/goldrings/114876",
                   onSale: "no",
                 },
               ],
@@ -398,6 +417,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum, dolor"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/jewellery/jewelleryproducts/rings/7786",
               onSale: "no",
             },
           ],
@@ -415,8 +435,8 @@ const PRODUCT_DATA = {
           items: [
             {
               id: 10138,
-              name: "gold rings",
-              routeName: "goldrings",
+              name: "gold earrings",
+              routeName: "goldearrings",
               imageUrl:
                 "https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
               description:
@@ -435,6 +455,8 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route:
+                    "/jewellery/jewelleryproducts/earrings/goldearrings/10138",
                   onSale: "no",
                 },
                 {
@@ -449,6 +471,8 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
+                  route:
+                    "/jewellery/jewelleryproducts/earrings/goldearrings/199776",
                   onSale: "yes",
                 },
               ],
@@ -465,6 +489,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/jewellery/jewelleryproducts/earrings/795446",
               onSale: "no",
             },
           ],
@@ -506,6 +531,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/777546",
               onSale: "no",
             },
             {
@@ -520,6 +546,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/9",
               onSale: "yes",
             },
             {
@@ -534,6 +561,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/190",
               onSale: "no",
             },
             {
@@ -548,6 +576,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/113",
               onSale: "yes",
             },
             {
@@ -562,6 +591,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/182",
               onSale: "no",
             },
             {
@@ -576,6 +606,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/13",
               onSale: "no",
             },
             {
@@ -590,6 +621,7 @@ const PRODUCT_DATA = {
               lorem: ["lorem, ipsum"],
               inStock: "yes",
               brand: "superbrand",
+              route: "/electronics/electronicsproducts/monitors/14",
               onSale: "no",
             },
           ],
