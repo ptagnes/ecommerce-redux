@@ -13,6 +13,7 @@ import {
 import { Heart, ChevronLeft, ChevronRight, Truck } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import img from "../../styles/sass/ui-assets/images/misc/payments.png";
+import Image from "react-bootstrap/Image";
 
 function ShoppingCart(props: any) {
   const cartItems = props.cartItems;
@@ -40,11 +41,7 @@ function ShoppingCart(props: any) {
                       <td>
                         <figure className="itemside">
                           <div className="aside">
-                            <img
-                              src={cartItem.imageUrl}
-                              className="img-sm"
-                              alt="product-image"
-                            />
+                            <Image src={cartItem.imageUrl} className="img-sm" />
                           </div>
                           <figcaption className="info">
                             <Link className="title text-dark" to={`/`}>
