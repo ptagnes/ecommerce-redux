@@ -32,7 +32,7 @@ function ItemList({
   const itm = sortedItems.length > 0 ? sortedItems : items;
   const currentPosts = itm.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
-  console.log(itm.route);
+
   return (
     // <Layout>
     <Container fluid>

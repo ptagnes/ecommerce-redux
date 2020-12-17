@@ -8,9 +8,16 @@ import {
 } from "../../redux/selectors/cartSelectors";
 import {
   // clearItemFromCart,
+  addItem,
   removeItem,
 } from "../../redux/actions/cartActions";
-import { Heart, ChevronLeft, ChevronRight, Truck } from "react-bootstrap-icons";
+import {
+  // Heart,
+  ChevronLeft,
+  ChevronRight,
+  Truck,
+  Plus,
+} from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import img from "../../styles/sass/ui-assets/images/misc/payments.png";
 import Image from "react-bootstrap/Image";
@@ -18,6 +25,7 @@ import Image from "react-bootstrap/Image";
 function ShoppingCart(props: any) {
   const cartItems = props.cartItems;
   const removeItem = props.removeItem;
+  const addItem = props.addItem;
   const total = props.total;
   console.log(cartItems);
 
@@ -25,7 +33,7 @@ function ShoppingCart(props: any) {
     <section className="section-content padding-y">
       <div className="container">
         <div className="row">
-          <main className="col-md-9">
+          <main className="col-md-12 col-lg-9">
             <div className="card">
               <table className="table table-borderless table-shopping-cart">
                 <thead className="text-muted">
@@ -55,9 +63,38 @@ function ShoppingCart(props: any) {
                         </figure>
                       </td>
                       <td>
-                        <select className="form-control">
+                        {/* <select className="form-control">
                           <option>{cartItem.quantity}</option>
-                        </select>
+                        </select> */}
+                        <div className="col" style={{ width: "160px" }}>
+                          <div className="input-group input-spinner">
+                            <div className="input-group-prepend">
+                              <button
+                                className="btn btn-light"
+                                type="button"
+                                id="button-plus"
+                                onClick={() => removeItem(cartItem)}
+                              >
+                                -
+                              </button>
+                            </div>
+                            <input
+                              type="text"
+                              className="form-control"
+                              value={cartItem.quantity}
+                            />
+                            <div className="input-group-append">
+                              <button
+                                className="btn btn-light"
+                                type="button"
+                                id="button-minus"
+                                onClick={() => addItem(cartItem)}
+                              >
+                                <Plus />
+                              </button>
+                            </div>
+                          </div>
+                        </div>{" "}
                       </td>
                       <td>
                         <div className="price-wrap">
@@ -65,7 +102,7 @@ function ShoppingCart(props: any) {
                           {/* <small className="text-muted"> $315.20 each </small> */}
                         </div>
                       </td>
-                      <td className="text-right">
+                      {/* <td className="text-right">
                         <div
                           data-original-title="Save to Wishlist"
                           className="btn btn-light"
@@ -79,7 +116,7 @@ function ShoppingCart(props: any) {
                         >
                           Remove
                         </div>
-                      </td>
+                      </td> */}
                     </tr>
                   ))}
                 </tbody>
@@ -101,7 +138,7 @@ function ShoppingCart(props: any) {
               </p>
             </div>
           </main>
-          <aside className="col-md-3">
+          <aside className="col-md-12 col-lg-3">
             <div className="card mb-3">
               <div className="card-body">
                 <form>
@@ -163,5 +200,6 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   removeItem: (item: any) => dispatch<any>(removeItem(item)),
+  addItem: (item: any) => dispatch<any>(addItem(item)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

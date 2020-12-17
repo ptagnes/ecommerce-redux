@@ -54,6 +54,16 @@ a {
     height: 100vh;
   }
 }
+.card-product-list {
+  @media (max-width: 768px) {
+    .img-wrap {
+      height: 90px !important;
+    }
+    .info-aside {
+      padding-top: 0 !important;
+    }
+  }
+}
 .show-filter-enter {
   opacity: 0;
   transform: scale(0.9);

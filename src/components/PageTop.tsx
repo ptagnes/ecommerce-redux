@@ -6,8 +6,8 @@ import { useLocation } from "react-router-dom";
 
 function PageTop({ categories }: { categories: any }) {
   const location = useLocation();
-  let pathName = location.pathname.split("/").pop();
-  // console.log(pathName);
+  // let pathName = location.pathname.split("/").pop();
+  console.log(location.pathname);
 
   return (
     <section className="section-pagetop bg">
@@ -22,10 +22,13 @@ function PageTop({ categories }: { categories: any }) {
               <a href="/">Home</a>
             </li>
             <li className="breadcrumb-item">
-              <a href="/">{pathName}</a>
+              <a href={`/products`}>products</a>
             </li>
+            {/* <li className="breadcrumb-item">
+              <a href={`${location.pathname}`}>{pathName}</a>
+            </li> */}
             <li className="breadcrumb-item active" aria-current="page">
-              Great articles
+              Category
             </li>
           </ol>
         </nav>
