@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import { ArrowDown } from "react-bootstrap-icons";
 
 function AccordionCustom2({
   item,
@@ -25,71 +26,56 @@ function AccordionCustom2({
   };
 
   //className={currentActiveKey === k ? clName : ""}
-
+  console.log("item");
+  console.log(item);
   return (
-    <Accordion>
-      <Card>
-        <Accordion.Toggle
-          as={Card.Header}
-          onClick={() => {
-            toggleActiveKey("0");
-          }}
-          eventKey={"0"}
-        >
-          <Link to={`/productcategory/${topRoute}/${middleRoute}/${topUrl}`}>
-            {topCategory}
-          </Link>
-        </Accordion.Toggle>
-        <Accordion.Collapse eventKey={"0"}>
-          <Card.Body className="catNav3">
-            {item.name}
-            {/**Embedded menu start */}
-            {item &&
-              item.map((item: any, key: any) => {
-                return (
-                  <div key={key} className="catNav-elem">
-                    {item.subitems ? (
-                      <Accordion>
-                        <Card>
-                          <Card.Header>
-                            <Accordion.Toggle
-                              as={Button}
-                              variant="link"
-                              eventKey="0"
-                            >
-                              {item.name}
-                            </Accordion.Toggle>
-                          </Card.Header>
-                          {item.subitems.map((itm: any, i: any) => (
-                            <Accordion.Collapse eventKey="0" key={i}>
-                              <Card.Body className="catNav4">
-                                <Link
-                                  to={`/details/${topRoute}/${middleRoute}/${topUrl}/${itm.id}`}
+    <>
+      {item &&
+        item.map((item: any, key: any) => {
+          return (
+            <div key={key}>
+              {item.subitems && (
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      onClick={() => {
+                        toggleActiveKey("0");
+                      }}
+                      eventKey={"0"}
+                    >
+                      <Link
+                        to={`/productcategory/${topRoute}/${middleRoute}/${topUrl}`}
+                      >
+                        <ArrowDown /> {topCategory}: categories
+                      </Link>
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey={"0"}>
+                      <Card.Body className="catNav3">
+                        <div key={key} className="catNav-elem">
+                          <Accordion>
+                            <Card>
+                              <Card.Header>
+                                <Accordion.Toggle
+                                  as={Button}
+                                  variant="link"
+                                  eventKey="0"
                                 >
-                                  {itm.name}
-                                </Link>
-                              </Card.Body>
-                            </Accordion.Collapse>
-                          ))}
-                        </Card>
-                      </Accordion>
-                    ) : (
-                      <>
-                        <Link
-                          to={`/details/${topRoute}/${middleRoute}/${topUrl}/${item.id}`}
-                        >
-                          {item.name}
-                        </Link>
-                      </>
-                    )}
-                  </div>
-                );
-              })}
-            {/**Embedded menu end */}
-          </Card.Body>
-        </Accordion.Collapse>
-      </Card>
-    </Accordion>
+                                  {item.name}
+                                </Accordion.Toggle>
+                              </Card.Header>
+                            </Card>
+                          </Accordion>
+                        </div>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              )}
+            </div>
+          );
+        })}
+    </>
   );
 }
 

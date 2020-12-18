@@ -4,7 +4,7 @@ import { Dispatch } from "redux";
 import { selectTopCategories } from "../redux/selectors/itemSelectors";
 import AccordionTopCustom from "./CategoryNavigation/AccordionTopCustom";
 import { Accordion } from "react-bootstrap";
-import Search from "./Search";
+import SearchProducts from "./Search";
 
 function TopNavigation({ categories }: { categories: any }) {
   return (
@@ -19,7 +19,7 @@ function TopNavigation({ categories }: { categories: any }) {
         </header>
         <div className="filter-content collapse show" id="collapse_1">
           <div className="card-body search-body">
-            <Search />
+            <SearchProducts />
           </div>
         </div>
       </article>

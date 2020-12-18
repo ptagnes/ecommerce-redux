@@ -45,15 +45,23 @@ function AccordionCustom({
             {item.productList &&
               item.productList.map((item: any, key: any) => {
                 return (
-                  <AccordionCustom2
-                    key={key}
-                    topCategory={item.name}
-                    clName={"something"}
-                    item={item.items}
-                    topUrl={item.routeName}
-                    topRoute={topRoute}
-                    middleRoute={rname}
-                  />
+                  <>
+                    <Link
+                      style={{ padding: "1rem", display: "block" }}
+                      to={`/productcategory/${topRoute}/${rname}/${item.routeName}`} //${topUrl}
+                    >
+                      {item.name}
+                    </Link>
+                    <AccordionCustom2
+                      key={key}
+                      topCategory={item.name}
+                      clName={"something"}
+                      item={item.items}
+                      topUrl={item.routeName}
+                      topRoute={topRoute}
+                      middleRoute={rname}
+                    />
+                  </>
                 );
               })}
             {/**Embedded accordion end */}

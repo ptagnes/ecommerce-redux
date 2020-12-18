@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { searchItems } from "../redux/actions";
+import { Search } from "react-bootstrap-icons";
+import { InputGroup, FormControl } from "react-bootstrap";
 interface SearchProps {
   searchItems?: (text: string) => void;
 }
 interface SearchState {
   value: string;
 }
-class Search extends Component<SearchProps, SearchState> {
+class SearchProducts extends Component<SearchProps, SearchState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -32,11 +34,19 @@ class Search extends Component<SearchProps, SearchState> {
       <div className="pb-3">
         <div className="input-group">
           <form onSubmit={this.handleSubmit} style={{ width: "100%" }}>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              className="form-control"
-            />
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id="search-products">
+                  <Search />
+                </InputGroup.Text>
+              </InputGroup.Prepend>
+              <FormControl
+                onChange={this.handleChange}
+                placeholder="Search Products"
+                aria-label="Search Products"
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
           </form>
         </div>
       </div>
@@ -48,4 +58,4 @@ const mapDispatchToProps = {
   searchItems,
 };
 
-export default connect(null, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(SearchProducts);

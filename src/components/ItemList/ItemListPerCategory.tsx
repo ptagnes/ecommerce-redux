@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import ItemsHeader from "./ItemsHeader";
 import ItemView from "./ItemView";
 import { selectItemsGrid } from "../../redux/selectors/itemSelectors";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 function ItemListPerCategory({
   categoryItems,
@@ -28,7 +29,9 @@ function ItemListPerCategory({
   return (
     <Container fluid>
       <ItemsHeader itemCount={categoryItems.length} items={categoryItems} />
+
       <Row>
+        {/* <TransitionGroup component="div" className="row"> */}
         {itm && itm.length > 0
           ? Object.values(itm).map((item: any, i) => {
               return (
@@ -39,6 +42,14 @@ function ItemListPerCategory({
                   lg={grid ? 6 : 12}
                   className="product-grid"
                 >
+                  {/* <CSSTransition
+                    timeout={500}
+                    // classNames="fade"
+                    key={i}
+                    in={true}
+                    classNames="show-filter"
+                    unmountOnExit
+                  > */}
                   <ItemView
                     imageUrl={item.imageUrl}
                     name={item.name}
@@ -48,10 +59,12 @@ function ItemListPerCategory({
                     badgeText="BUY NOW"
                     grid={grid}
                   />
+                  {/* </CSSTransition> */}
                 </Col>
               );
             })
           : "no results"}
+        {/* </TransitionGroup> */}
       </Row>
     </Container>
   );
