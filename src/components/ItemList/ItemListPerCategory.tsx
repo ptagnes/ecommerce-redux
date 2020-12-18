@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import ItemsHeader from "./ItemsHeader";
 import ItemView from "./ItemView";
 import { selectItemsGrid } from "../../redux/selectors/itemSelectors";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 function ItemListPerCategory({
   categoryItems,
