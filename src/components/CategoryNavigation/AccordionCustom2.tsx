@@ -39,6 +39,7 @@ function AccordionCustom2({
                   <Card>
                     <Accordion.Toggle
                       as={Card.Header}
+                      style={{ paddingLeft: "1.5rem" }}
                       onClick={() => {
                         toggleActiveKey("0");
                       }}

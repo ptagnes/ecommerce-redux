@@ -66,7 +66,10 @@ function ShoppingCart(props: any) {
                         {/* <select className="form-control">
                           <option>{cartItem.quantity}</option>
                         </select> */}
-                        <div className="col" style={{ width: "160px" }}>
+                        <div
+                          className="col"
+                          style={{ width: "138px", padding: "0" }}
+                        >
                           <div className="input-group input-spinner">
                             <div className="input-group-prepend">
                               <button
@@ -99,7 +102,12 @@ function ShoppingCart(props: any) {
                       <td>
                         <div className="price-wrap">
                           <var className="price">
-                            {cartItem.quantity * cartItem.price}
+                            {/* {cartItem.quantity * cartItem.price} */}
+                            {Math.round(
+                              (cartItem.quantity * cartItem.price +
+                                Number.EPSILON) *
+                                100
+                            ) / 100}
                           </var>
                           {/* <small className="text-muted"> $315.20 each </small> */}
                         </div>
