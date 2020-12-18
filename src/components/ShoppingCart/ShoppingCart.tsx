@@ -98,7 +98,9 @@ function ShoppingCart(props: any) {
                       </td>
                       <td>
                         <div className="price-wrap">
-                          <var className="price">{cartItem.price}</var>
+                          <var className="price">
+                            {cartItem.quantity * cartItem.price}
+                          </var>
                           {/* <small className="text-muted"> $315.20 each </small> */}
                         </div>
                       </td>

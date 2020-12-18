@@ -21,9 +21,9 @@ function PageTop({ categories }: { categories: any }) {
             <li className="breadcrumb-item">
               <a href="/">Home</a>
             </li>
-            <li className="breadcrumb-item">
-              <a href={`/products`}>products</a>
-            </li>
+            {/* <li className="breadcrumb-item">
+              <a href={`/`}>products</a>
+            </li> */}
             {/* <li className="breadcrumb-item">
               <a href={`${location.pathname}`}>{pathName}</a>
             </li> */}
