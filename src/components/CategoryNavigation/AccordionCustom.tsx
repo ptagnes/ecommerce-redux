@@ -45,7 +45,7 @@ function AccordionCustom({
             {item.productList &&
               item.productList.map((item: any, key: any) => {
                 return (
-                  <>
+                  <div key={key}>
                     <Link
                       style={{ padding: "1rem", display: "block" }}
                       to={`/productcategory/${topRoute}/${rname}/${item.routeName}`} //${topUrl}
@@ -61,7 +61,7 @@ function AccordionCustom({
                       topRoute={topRoute}
                       middleRoute={rname}
                     />
-                  </>
+                  </div>
                 );
               })}
             {/**Embedded accordion end */}

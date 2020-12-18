@@ -1,30 +1,27 @@
 import React from "react";
 import { Switch, Route } from "react-router";
-// import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import ItemListCategories from "./components/ItemList/ItemListCategories";
 import ItemListSubCategories from "./components/ItemList/ItemListSubCategories";
 import ItemListPerCategory from "./components/ItemList/ItemListPerCategory";
 import ItemDetail from "./components/ItemList/ItemDetail";
 import ItemList from "./components/ItemList/ItemList";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+// import Start from "./components/Start";
 
 export default (
   <Switch>
-    {/* <Route
+    <Route
       exact
       path="/"
       render={() => {
         return <Redirect to="/products" />;
       }}
-    /> */}
+    />
     {/* <Route
       path="/"
       render={({ match: { url } }) => (
-        <Route
-          path={`${url}/`}
-          render={(props) => <ItemList {...props} />}
-          exact
-        />
+        <Route path={`${url}/`} render={() => <Start />} exact />
       )}
     /> */}
     <Route
