@@ -26,8 +26,8 @@ function AccordionCustom2({
   };
 
   //className={currentActiveKey === k ? clName : ""}
-  console.log("item");
-  console.log(item);
+  // console.log("item");
+  // console.log(item);
   return (
     <>
       {item &&

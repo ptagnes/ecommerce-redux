@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { searchItems } from "../../redux/selectors/itemSelectors";
@@ -9,6 +9,7 @@ import ItemsHeader from "./ItemsHeader";
 import ItemView from "./ItemView";
 import { selectItemsGrid } from "../../redux/selectors/itemSelectors";
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { useLocation } from "react-router-dom";
 
 function ItemListPerCategory({
   categoryItems,
@@ -26,10 +27,21 @@ function ItemListPerCategory({
   sortedItems: any;
 }) {
   const itm = sortedItems.length > 0 ? sortedItems : categoryItems;
+  const location = useLocation();
+  const prodRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (prodRef.current) {
+      console.log("Location changed");
+      window.scrollTo({
+        behavior: "smooth",
+        top: prodRef.current.offsetTop,
+      });
+    }
+  }, [location]);
   return (
     <Container fluid>
       <ItemsHeader itemCount={categoryItems.length} items={categoryItems} />
-
+      <span className="srollref" ref={prodRef}></span>
       <Row>
         {/* <TransitionGroup component="div" className="row"> */}
         {itm && itm.length > 0

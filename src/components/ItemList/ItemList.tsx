@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { withRouter } from "react-router-dom";
@@ -15,6 +15,7 @@ import ItemsHeader from "./ItemsHeader";
 // import svgimg from "../data/picture_missing_text.svg";
 import { selectItemsGrid } from "../../redux/selectors/itemSelectors";
 import ItemView from "./ItemView";
+import { useLocation } from "react-router-dom";
 
 function ItemList({
   items,
@@ -32,12 +33,23 @@ function ItemList({
   const itm = sortedItems.length > 0 ? sortedItems : items;
   const currentPosts = itm.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
+  const location = useLocation();
+  const prodRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (prodRef.current) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: prodRef.current.offsetTop,
+      });
+    }
+  }, [location]);
 
   return (
     // <Layout>
     <Container fluid>
       <ItemsHeader itemCount={items.length} items={items} />
-      <Row>
+      <span className="srollref" ref={prodRef}></span>
+      <Row ref={prodRef}>
         {currentPosts.length > 0
           ? Object.values(currentPosts).map((item: any, i) => {
               return (
