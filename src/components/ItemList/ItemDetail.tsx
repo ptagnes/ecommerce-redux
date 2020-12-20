@@ -14,12 +14,17 @@ import { addItem, removeItem } from "../../redux/actions/cartActions";
 import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
-  console.log(item);
+  // console.log(item);
   const [quantity, setQuantity] = useState<number>(1);
-  const handleOnChange = () => {
+  const handleOnChange = (action: string) => {
     // setQuantity(quantity + 1);
-    setQuantity(2);
-    console.log("click");
+    if (action === "increment") {
+      setQuantity(2);
+      console.log("increment");
+    } else {
+      setQuantity(1);
+      console.log("decrement");
+    }
   };
   return (
     <Container fluid>
@@ -47,9 +52,12 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
                   <dd className="col-sm-9">{item.brand}</dd>
                 </>
               )}
-
-              <dt className="col-sm-3">Color</dt>
-              <dd className="col-sm-9">Brown</dd>
+              {/* {item.color && (
+                <>
+                  <dt className="col-sm-3">Color</dt>
+                  <dd className="col-sm-9">{item.color}</dd>
+                </>
+              )} */}
             </dl>
             <hr />
             <div className="row">
@@ -63,23 +71,28 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
                         type="button"
                         id="button-plus"
                         // onClick={() => removeItem(item)}
-                        onClick={(e) => handleOnChange()}
+                        onClick={() => handleOnChange("decrement")}
                       >
                         -
                       </button>
                     </div>
-                    <input
+                    {/* <input
                       type="text"
                       className="form-control"
                       value={quantity}
-                      // value={item.quantity}
-                    />
+                    /> */}
+                    <span
+                      className="form-control"
+                      style={{ textAlign: "center" }}
+                    >
+                      {quantity}
+                    </span>
                     <div className="input-group-append">
                       <button
                         className="btn btn-light"
                         type="button"
                         id="button-minus"
-                        onClick={(e) => handleOnChange()}
+                        onClick={() => handleOnChange("increment")}
                         // onClick={() => addItem(item)}
                       >
                         <Plus />
