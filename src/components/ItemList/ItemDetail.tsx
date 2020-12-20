@@ -14,16 +14,14 @@ import { addItem, removeItem } from "../../redux/actions/cartActions";
 import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
-  // console.log(item);
   const [quantity, setQuantity] = useState<number>(1);
   const handleOnChange = (action: string) => {
-    // setQuantity(quantity + 1);
     if (action === "increment") {
-      setQuantity(2);
-      console.log("increment");
+      setQuantity(quantity + 1);
     } else {
-      setQuantity(1);
-      console.log("decrement");
+      if (quantity > 0) {
+        setQuantity(quantity - 1);
+      }
     }
   };
   return (
