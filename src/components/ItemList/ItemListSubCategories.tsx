@@ -27,7 +27,7 @@ function ItemListSubCategories({
               return (
                 <Col key={i} xs={12} md={6} lg={6}>
                   <div
-                    className="card-banner"
+                    className="card-banner overlay-gradient"
                     style={{
                       height: "220px",
                       backgroundImage: `url(${item.imageUrl})`,
@@ -38,6 +38,7 @@ function ItemListSubCategories({
                       <h5 className="card-title">{item.name}</h5>
                       <p>{item.description}</p>
                       <Link
+                        className="btn btn-warning"
                         to={`/productcategory/${routeTopCategory}/${routeSubCategory}/${item.routeName}`}
                       >
                         Browse products

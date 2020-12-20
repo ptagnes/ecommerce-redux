@@ -40,7 +40,7 @@ function ItemListCategories({
                         className="btn btn-warning"
                         to={`/productcategories/${routecategory}/${item.routeName}`}
                       >
-                        Browse products in category: {item.name}
+                        Browse products
                       </Link>
                     </div>
                   </Jumbotron>

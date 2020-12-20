@@ -7,7 +7,7 @@ const PRODUCT_DATA = {
       routeName: "mens",
       class: "icon-ambientais fs1 icon menu-button",
       imageUrl:
-        "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
       productList: [
@@ -16,7 +16,8 @@ const PRODUCT_DATA = {
           name: "Mens' outer wear",
           category: "outer wear",
           routeName: "mensouter",
-          imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
+          imageUrl:
+            "https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           items: [
@@ -83,10 +84,10 @@ const PRODUCT_DATA = {
         },
         {
           id: 19422,
-          name: "sports wear",
+          name: "Men's sports wear",
           routeName: "menssports",
           imageUrl:
-            "https://images.pexels.com/photos/975250/pexels-photo-975250.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://images.pexels.com/photos/1103833/pexels-photo-1103833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           category: "sports wear",
@@ -211,7 +212,7 @@ const PRODUCT_DATA = {
       routeName: "womens",
       class: "icon-ambientais fs1 icon menu-button",
       imageUrl:
-        "https://www.pexels.com/sv-se/foto/stad-mode-semester-kvinna-4814633/",
+        "https://images.pexels.com/photos/3765547/pexels-photo-3765547.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
       productList: [
@@ -222,7 +223,7 @@ const PRODUCT_DATA = {
           class: "some class",
           category: "outer wear",
           imageUrl:
-            "https://images.pexels.com/photos/975250/pexels-photo-975250.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://images.pexels.com/photos/3765547/pexels-photo-3765547.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           items: [
@@ -260,10 +261,10 @@ const PRODUCT_DATA = {
         },
         {
           id: 19478922,
-          name: "Sports wear women",
+          name: "Women's sports wear",
           routeName: "womenssports",
           imageUrl:
-            "https://images.pexels.com/photos/975250/pexels-photo-975250.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            "https://images.pexels.com/photos/3768730/pexels-photo-3768730.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           category: "sports wear",
@@ -302,9 +303,10 @@ const PRODUCT_DATA = {
         },
         {
           id: 136641,
-          name: "Leasure wear women",
+          name: "Women's leasure wear",
           routeName: "womensleasure",
-          imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
+          imageUrl:
+            "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           category: "leasure wear",
