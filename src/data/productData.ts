@@ -145,13 +145,14 @@ const PRODUCT_DATA = {
           imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-          category: "leasure wear",
+          category: "mensleasure",
           items: [
             {
               id: 18540008,
               name: "Levi Jeans",
               imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
               routeName: "levisjeans",
+              categoryName: "mensleasure",
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               subitems: [
@@ -166,7 +167,7 @@ const PRODUCT_DATA = {
                   colors: ["black, white"],
                   inStock: "yes",
                   brand: "superbrand",
-                  route: "/fashion/mens/mensleasure/levisjeans/1340008",
+                  route: "/fashion/mens/mensleasure/1340008",
                   onSale: "yes",
                 },
                 {
@@ -180,7 +181,7 @@ const PRODUCT_DATA = {
                   colors: ["black, white, green"],
                   inStock: "yes",
                   brand: "superbrand",
-                  route: "/fashion/mens/mensleasure/levisjeans/1143986",
+                  route: "/fashion/mens/mensleasure/1143986",
                   onSale: "no",
                 },
               ],
@@ -355,56 +356,57 @@ const PRODUCT_DATA = {
       productList: [
         {
           id: 6641,
-          category: "rings",
           name: "rings",
           routeName: "rings",
           imageUrl:
             "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+          category: "rings",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
           items: [
-            {
-              id: 108,
-              name: "gold rings",
-              routeName: "goldrings",
-              imageUrl:
-                "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-              price: "100-1000",
-              subitems: [
-                {
-                  id: 13008,
-                  name: "Pierced Owl Rose Gold Plated",
-                  imageUrl:
-                    "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-                  price: 133.3,
-                  sizes: ["s, m"],
-                  lorem: ["lorem, ipsum"],
-                  inStock: "yes",
-                  brand: "superbrand",
-                  route: "/jewellery/jewelleryproducts/rings/goldrings/13008",
-                  onSale: "no",
-                },
-                {
-                  id: 114876,
-                  name: "White Gold Plated Princess",
-                  imageUrl:
-                    "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-                  price: 223.3,
-                  sizes: ["s, m"],
-                  lorem: ["lorem, ipsum"],
-                  inStock: "yes",
-                  brand: "superbrand",
-                  route: "/jewellery/jewelleryproducts/rings/goldrings/114876",
-                  onSale: "no",
-                },
-              ],
-            },
+            // {
+            //   id: 108,
+            //   name: "gold rings",
+            //   routeName: "goldrings",
+            //   categoryName: "rings",
+            //   imageUrl:
+            //     "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+            //   description:
+            //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+            //   price: "100-1000",
+            //   subitems: [
+            //     {
+            //       id: 13008,
+            //       name: "Pierced Owl Rose Gold Plated",
+            //       imageUrl:
+            //         "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+            //       description:
+            //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+            //       price: 133.3,
+            //       sizes: ["s, m"],
+            //       lorem: ["lorem, ipsum"],
+            //       inStock: "yes",
+            //       brand: "superbrand",
+            //       route: "/jewellery/jewelleryproducts/rings/goldrings/13008",
+            //       onSale: "no",
+            //     },
+            //     {
+            //       id: 114876,
+            //       name: "White Gold Plated Princess",
+            //       imageUrl:
+            //         "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+            //       description:
+            //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+            //       price: 223.3,
+            //       sizes: ["s, m"],
+            //       lorem: ["lorem, ipsum"],
+            //       inStock: "yes",
+            //       brand: "superbrand",
+            //       route: "/jewellery/jewelleryproducts/rings/goldrings/114876",
+            //       onSale: "no",
+            //     },
+            //   ],
+            // },
             {
               id: 7786,
               name: "John Hardy Women's Legends Naga Gold & Silver Dragon",
@@ -431,23 +433,24 @@ const PRODUCT_DATA = {
             "https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-          price: "200-240",
+          price: 0,
           items: [
             {
               id: 10138,
               name: "gold earrings",
+              categoryName: "earrings",
               routeName: "goldearrings",
               imageUrl:
                 "https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-              price: "200-240",
+              price: 0,
               subitems: [
                 {
                   id: 16708,
                   name: "Pierced Owl Rose Gold Plated",
                   imageUrl:
-                    "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+                    "https://images.pexels.com/photos/1616096/pexels-photo-1616096.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 133.3,
@@ -455,15 +458,14 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
-                  route:
-                    "/jewellery/jewelleryproducts/earrings/goldearrings/10138",
+                  route: "/jewellery/jewelleryproducts/earrings/16708",
                   onSale: "no",
                 },
                 {
                   id: 199776,
                   name: "White Gold Plated Princess",
                   imageUrl:
-                    "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+                    "https://images.pexels.com/photos/1353424/pexels-photo-1353424.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 223.3,
@@ -471,8 +473,7 @@ const PRODUCT_DATA = {
                   lorem: ["lorem, ipsum"],
                   inStock: "yes",
                   brand: "superbrand",
-                  route:
-                    "/jewellery/jewelleryproducts/earrings/goldearrings/199776",
+                  route: "/jewellery/jewelleryproducts/earrings/199776",
                   onSale: "yes",
                 },
               ],
@@ -481,7 +482,7 @@ const PRODUCT_DATA = {
               id: 795446,
               name: "John Hardy Women's Legends Naga Gold & Silver Dragon",
               imageUrl:
-                "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+                "https://images.pexels.com/photos/2697775/pexels-photo-2697775.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 34.22,

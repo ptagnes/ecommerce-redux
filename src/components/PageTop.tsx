@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { selectTopCategories } from "../redux/selectors/itemSelectors";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 function PageTop({ categories }: { categories: any }) {
-  const location = useLocation();
+  // const location = useLocation();
   // let pathName = location.pathname.split("/").pop();
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   return (
     <section className="section-pagetop bg">

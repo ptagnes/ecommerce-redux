@@ -7,6 +7,7 @@ import ItemListPerCategory from "./components/ItemList/ItemListPerCategory";
 import ItemDetail from "./components/ItemList/ItemDetail";
 import ItemList from "./components/ItemList/ItemList";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+import ItemListSubSubCategory from "./components/ItemList/ItemListSubSubCategory";
 // import Start from "./components/Start";
 
 export default (
@@ -54,6 +55,15 @@ export default (
         <Route
           path={`${url}/:category/:subcat/:subsubcat`}
           render={(props) => <ItemListPerCategory {...props} />}
+        />
+      )}
+    />
+    <Route
+      path="/productsubcategory"
+      render={({ match: { url } }) => (
+        <Route
+          path={`${url}/:category/:subcat/:subsubcat/:subsubsubcat`}
+          render={(props) => <ItemListSubSubCategory {...props} />}
         />
       )}
     />

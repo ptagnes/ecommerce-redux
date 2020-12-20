@@ -27,7 +27,7 @@ function ShoppingCart(props: any) {
   const removeItem = props.removeItem;
   const addItem = props.addItem;
   const total = props.total;
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <section className="section-content padding-y">

@@ -14,6 +14,7 @@
 .catNav0 {
   a {
     color: #9ca2a9;
+    display: block;
     &:hover {
       color: #828385;
     }
@@ -35,7 +36,8 @@
 .catNav2,
 .catNav3 {
   &.card-body {
-    padding: 0 0 0 1rem;
+    background: transparent;
+    padding: 0;
   }
 }
 .catNav3 {
@@ -47,6 +49,9 @@
 .active.card-header {
   background-color: #ffc107;
 }
+// .catNav3 {
+//   padding: 0 0.7rem 1rem;
+// }
 @media (max-width: 768px) {
   .catNav {
     .search-header {

@@ -1,6 +1,6 @@
 export const sortItems = (sort: string, items: any) => {
-  console.log("action in reducer sortItems");
-  console.log(sort);
+  // console.log("action in reducer sortItems");
+  // console.log(sort);
 
   switch (sort) {
     case "cheapestasc":

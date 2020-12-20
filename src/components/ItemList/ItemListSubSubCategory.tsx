@@ -10,9 +10,9 @@ import ItemView from "./ItemView";
 import { selectItemsGrid } from "../../redux/selectors/itemSelectors";
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-function ItemListPerCategory({
+function ItemListSubSubCategory({
   categoryItems,
   routeTopCategory,
   routeSubCategory,
@@ -38,8 +38,8 @@ function ItemListPerCategory({
       });
     }
   }, [location]);
-
-  var pathArray = window.location.pathname.split("/");
+  //   console.log("collection");
+  //   console.log(categoryItems);
   return (
     <Container fluid>
       <ItemsHeader itemCount={categoryItems.length} items={categoryItems} />
@@ -64,44 +64,15 @@ function ItemListPerCategory({
                     classNames="show-filter"
                     unmountOnExit
                   > */}
-                  {item.subitems ? (
-                    <>
-                      <div
-                        className="card-banner overlay-gradient"
-                        style={{
-                          minHeight: "230px",
-                          backgroundImage: `url(${item.imageUrl})`,
-                          marginBottom: "1rem",
-                        }}
-                      >
-                        <div className="card-img-overlay white">
-                          <h3 className="card-title">{item.name}</h3>
-                          <p
-                            className="card-text"
-                            style={{ maxWidth: "400px" }}
-                          >
-                            {item.description}
-                          </p>
-                          <Link
-                            className="btn btn-warning"
-                            to={`/productsubcategory/${pathArray[2]}/${pathArray[3]}/${pathArray[4]}/${item.routeName}`}
-                          >
-                            Browse items
-                          </Link>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <ItemView
-                      imageUrl={item.imageUrl}
-                      name={item.name}
-                      description={item.description}
-                      link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
-                      price={item.price}
-                      badgeText="BUY NOW"
-                      grid={grid}
-                    />
-                  )}
+                  <ItemView
+                    imageUrl={item.imageUrl}
+                    name={item.name}
+                    description={item.description}
+                    link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
+                    price={item.price}
+                    badgeText="BUY NOW"
+                    grid={grid}
+                  />
                   {/* </CSSTransition> */}
                 </Col>
               );
@@ -128,4 +99,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({});
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ItemListPerCategory);
+)(ItemListSubSubCategory);
