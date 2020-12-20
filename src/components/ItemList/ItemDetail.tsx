@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import {
@@ -10,9 +10,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import { Heart, Cart } from "react-bootstrap-icons";
-import { addItem } from "../../redux/actions/cartActions";
+import { addItem, removeItem } from "../../redux/actions/cartActions";
+import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
+  console.log(item);
+  const [quantity, setQuantity] = useState<number>(1);
+  const handleOnChange = () => {
+    // setQuantity(quantity + 1);
+    setQuantity(2);
+    console.log("click");
+  };
   return (
     <Container fluid>
       <Row>
@@ -21,15 +29,24 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
         </Col>
         <Col xs={12} md={6} lg={7} className="border-left">
           <div className="content-body">
+            {item.onSale && item.onSale === "yes" && (
+              <span className="badge badge-success"> ON SALE </span>
+            )}
             <h2 className="title">{item && item.name}</h2>
             <div className="mb-3">
               <var className="price h4">{item.price}$</var>
-              {/* <span className="text-muted">/per kg</span> */}
+              {item.onSale && item.onSale === "yes" && (
+                <del className="price-old">$190</del>
+              )}
             </div>
             <p>{item.description}</p>
             <dl className="row">
-              <dt className="col-sm-3">Model#</dt>
-              <dd className="col-sm-9">Odsy-1000</dd>
+              {item.brand && (
+                <>
+                  <dt className="col-sm-3">Brand</dt>
+                  <dd className="col-sm-9">{item.brand}</dd>
+                </>
+              )}
 
               <dt className="col-sm-3">Color</dt>
               <dd className="col-sm-9">Brown</dd>
@@ -38,27 +55,36 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
             <div className="row">
               <div className="form-group col-md ">
                 <label>Quantity</label>
-                <div className="input-group mb-3 input-spinner">
-                  <div className="input-group-prepend">
-                    <button
-                      className="btn btn-light"
-                      type="button"
-                      id="button-plus"
-                    >
-                      {" "}
-                      +{" "}
-                    </button>
-                  </div>
-                  <input type="text" className="form-control" value="1" />
-                  <div className="input-group-append">
-                    <button
-                      className="btn btn-light"
-                      type="button"
-                      id="button-minus"
-                    >
-                      {" "}
-                      −{" "}
-                    </button>
+                <div className="col" style={{ width: "138px", padding: "0" }}>
+                  <div className="input-group input-spinner">
+                    <div className="input-group-prepend">
+                      <button
+                        className="btn btn-light"
+                        type="button"
+                        id="button-plus"
+                        // onClick={() => removeItem(item)}
+                        onClick={(e) => handleOnChange()}
+                      >
+                        -
+                      </button>
+                    </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={quantity}
+                      // value={item.quantity}
+                    />
+                    <div className="input-group-append">
+                      <button
+                        className="btn btn-light"
+                        type="button"
+                        id="button-minus"
+                        onClick={(e) => handleOnChange()}
+                        // onClick={() => addItem(item)}
+                      >
+                        <Plus />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -66,7 +92,7 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
             <div className="form-row">
               <div className="col">
                 <div
-                  onClick={() => addItem(item)}
+                  onClick={() => addItem(item)} //add quantity
                   className="btn  btn-primary w-100"
                 >
                   Add to cart <Cart />
@@ -101,5 +127,6 @@ const mapStateToProps = (state: any, ownProps: any) => {
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   addItem: (item: any) => dispatch<any>(addItem(item)),
+  removeItem: (item: any) => dispatch<any>(removeItem(item)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ItemDetail);

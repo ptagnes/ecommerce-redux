@@ -97,7 +97,7 @@ function ShoppingCart(props: any) {
                               </button>
                             </div>
                           </div>
-                        </div>{" "}
+                        </div>
                       </td>
                       <td>
                         <div className="price-wrap">

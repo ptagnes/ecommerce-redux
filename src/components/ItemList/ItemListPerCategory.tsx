@@ -98,7 +98,8 @@ function ItemListPerCategory({
                       description={item.description}
                       link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
                       price={item.price}
-                      badgeText="BUY NOW"
+                      badgeText={item.onSale === "yes" ? "ON SALE" : "BUY NOW"}
+                      onSale={item.onSale}
                       grid={grid}
                     />
                   )}

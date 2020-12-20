@@ -6,7 +6,7 @@ import { Search } from "react-bootstrap-icons";
 import Col from "react-bootstrap/Col";
 
 function ItemViewGrid(props: any) {
-  const { imageUrl, name, description, link, price, badgeText } = props;
+  const { imageUrl, name, description, link, price, badgeText, onSale } = props;
   return (
     <Figure className="card card-product-grid">
       <div className="img-wrap">
@@ -21,8 +21,10 @@ function ItemViewGrid(props: any) {
           <Link to={link}>View product: {name}</Link>
           <p>{description}</p>
           <div className="price-wrap mt-2">
-            <span className="price">{price}</span>
-            <del className="price-old">$1980</del>
+            <span className="price">{price}$</span>
+            {onSale && onSale === "yes" && (
+              <del className="price-old">$190</del>
+            )}
           </div>
         </div>
       </Figure.Caption>
@@ -31,7 +33,8 @@ function ItemViewGrid(props: any) {
 }
 function ItemViewList(props: any) {
   // const { imageUrl, name, description, link, price, badgeText, grid } = props;
-  const { imageUrl, name, description, price, badgeText } = props;
+  const { imageUrl, name, description, price, badgeText, onSale } = props;
+
   return (
     <article className="card card-product-list">
       <div className="row no-gutters">
@@ -56,8 +59,10 @@ function ItemViewList(props: any) {
         <Col xs={12} md={3} lg={3}>
           <div className="info-aside">
             <div className="price-wrap">
-              <span className="price h5"> {price} </span>
-              <del className="price-old"> $198</del>
+              <span className="price h5"> {price}$</span>
+              {onSale && onSale === "yes" && (
+                <del className="price-old">$190</del>
+              )}
             </div>
             <p className="text-success">Free shipping</p>
             <br />
