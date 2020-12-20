@@ -24,6 +24,12 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
       }
     }
   };
+  const addItems = () => {
+    for (var i = 0; i < quantity; i++) {
+      console.log(quantity);
+      addItem(item);
+    }
+  };
   return (
     <Container fluid>
       <Row>
@@ -103,7 +109,7 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
             <div className="form-row">
               <div className="col">
                 <div
-                  onClick={() => addItem(item)} //add quantity
+                  onClick={() => addItems()} //add quantity
                   className="btn  btn-primary w-100"
                 >
                   Add to cart <Cart />
