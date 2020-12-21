@@ -27,7 +27,8 @@ function ShoppingCart(props: any) {
   const removeItem = props.removeItem;
   const addItem = props.addItem;
   const total = props.total;
-  // console.log(cartItems);
+  console.log("cartItems");
+  console.log(cartItems);
 
   return (
     <section className="section-content padding-y">
@@ -57,7 +58,18 @@ function ShoppingCart(props: any) {
                               {cartItem.name}
                             </Link>
                             <p className="text-muted small">
-                              Size: NA, Color: NA, <br /> Brand: NA
+                              {cartItem.cartOptions &&
+                                Object.entries(cartItem.cartOptions).map(
+                                  ([key, val], index) => (
+                                    <span
+                                      style={{ display: "block" }}
+                                      key={index}
+                                    >
+                                      {key}: {val}
+                                    </span>
+                                  )
+                                )}
+                              {/* Size: NA, Color: NA, <br /> Brand: NA */}
                             </p>
                           </figcaption>
                         </figure>

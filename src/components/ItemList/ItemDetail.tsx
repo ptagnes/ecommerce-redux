@@ -16,27 +16,21 @@ import { Plus } from "react-bootstrap-icons";
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
   const { params } = item;
   console.log(params);
-  //flatMap solves [0] ---> Object.keys(x)[0]);
-  let test = params ? (
-    params.flatMap((x: any, i: any) => (
-      <>
-        <select
-          key={i}
-          className="form-control"
-          style={{ marginBottom: "1rem" }}
-        >
-          <option>{Object.keys(x)}</option>
-          <option>{Object.values(x).map((it: any) => it[0])}</option>
-          <option>{Object.values(x).map((it: any) => it[1])}</option>
-          <option>{Object.values(x).map((it: any) => it[2])}</option>
-        </select>
-        {Object.values(x)}
-      </>
-    ))
-  ) : (
-    <></>
-  );
   const [quantity, setQuantity] = useState<number>(1);
+  const [cartOptions, setCartOptions] = useState<any>();
+  const doOnChange = (
+    e: React.ChangeEvent<
+      HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement | any
+    >
+  ) => {
+    const {
+      target: { name, value },
+    } = e;
+    setCartOptions({
+      ...cartOptions,
+      [name]: value,
+    });
+  };
   const handleOnChange = (action: string) => {
     if (action === "increment") {
       setQuantity(quantity + 1);
@@ -47,11 +41,44 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
     }
   };
   const addItems = () => {
-    for (var i = 0; i < quantity; i++) {
-      console.log(quantity);
-      addItem(item);
+    if (cartOptions) {
+      const newItem = {
+        ...item,
+        cartOptions: cartOptions,
+      };
+      console.log(newItem); //options merged with original item
+      for (var i = 0; i < quantity; i++) {
+        console.log("Product added to cart!");
+        addItem(newItem);
+      }
+    } else {
+      alert("Please select options");
     }
   };
+  //flatMap solves [0] ---> Object.keys(x)[0]);
+  let test = params ? (
+    params.flatMap((x: any, i: any) => (
+      <div className="col-sm-12" style={{ marginBottom: "1rem" }} key={i}>
+        <select
+          key={i}
+          className="form-control"
+          onChange={(e) => doOnChange(e)}
+          name={Object.keys(x).toString()}
+        >
+          <option value="">{Object.keys(x)}</option>
+
+          {Object.values(x).map((it: any, i: any) => (
+            <option key={i} value={it[0]}>
+              {it[0]}
+            </option>
+          ))}
+          {/* {Object.values(x)} */}
+        </select>
+      </div>
+    ))
+  ) : (
+    <></>
+  );
   return (
     <Container fluid>
       <Row>

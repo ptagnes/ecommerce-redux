@@ -29,18 +29,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 22.3,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "white"],
+              size: ["s", "m", "l"],
+              color: ["black", "white"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/mensouter/100008",
               onSale: "yes",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "white"],
+                  color: ["black", "white"],
                 },
               ],
             },
@@ -51,18 +51,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 252.3,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "white"],
+              size: ["s", "m", "l"],
+              color: ["black", "white"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/mensouter/1143986",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "white"],
+                  color: ["black", "white"],
                 },
               ],
             },
@@ -74,18 +74,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 212.3,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "white"],
+              size: ["s", "m", "l"],
+              color: ["black", "white"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/mensouter/19886",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "white"],
+                  color: ["black", "white"],
                 },
               ],
             },
@@ -97,18 +97,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 2112.3,
-              sizes: ["xs", "s", "m", "l"],
-              colors: ["black", "green"],
+              size: ["xs", "s", "m", "l"],
+              color: ["black", "green"],
               inStock: "yes",
               brand: "Gucci",
               route: "/fashion/mens/mensouter/146386",
               onSale: "no",
               params: [
                 {
-                  sizes: ["xs", "s", "m", "l"],
+                  size: ["xs", "s", "m", "l"],
                 },
                 {
-                  colors: ["black", "green"],
+                  color: ["black", "green"],
                 },
               ],
             },
@@ -132,18 +132,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 44.3,
-              sizes: ["s", "m", "l"],
-              colors: ["red", "orange"],
+              size: ["s", "m", "l"],
+              color: ["red", "orange"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/menssports/15840",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["red", "orange"],
+                  color: ["red", "orange"],
                 },
               ],
             },
@@ -155,18 +155,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 28.3,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "green", "blue"],
+              size: ["s", "m", "l"],
+              color: ["black", "green", "blue"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/menssports/115555",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "green", "blue"],
+                  color: ["black", "green", "blue"],
                 },
               ],
             },
@@ -178,18 +178,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 28.3,
-              sizes: ["s", "m", "l"],
-              colors: ["red", "blue"],
+              size: ["s", "m", "l"],
+              color: ["red", "blue"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/menssports/16785",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["red", "blue"],
+                  color: ["red", "blue"],
                 },
               ],
             },
@@ -201,18 +201,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 21.3,
-              sizes: ["s", "m", "l"],
-              colors: ["red", "blue"],
+              size: ["s", "m", "l"],
+              color: ["red", "blue"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/menssports/153234234",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["red", "blue"],
+                  color: ["red", "blue"],
                 },
               ],
             },
@@ -245,18 +245,18 @@ const PRODUCT_DATA = {
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 33.3,
-                  sizes: ["s", "m", "l"],
-                  colors: ["black", "white"],
+                  size: ["s", "m", "l"],
+                  color: ["black", "white"],
                   inStock: "yes",
                   brand: "SuperBrand",
                   route: "/fashion/mens/mensleasure/1340008",
                   onSale: "yes",
                   params: [
                     {
-                      sizes: ["s", "m", "l"],
+                      size: ["s", "m", "l"],
                     },
                     {
-                      colors: ["black", "white"],
+                      color: ["black", "white"],
                     },
                   ],
                 },
@@ -268,18 +268,18 @@ const PRODUCT_DATA = {
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 23.3,
-                  sizes: ["s", "m", "l"],
-                  colors: ["green", "silver"],
+                  size: ["s", "m", "l"],
+                  color: ["green", "silver"],
                   inStock: "yes",
                   brand: "SuperBrand",
                   route: "/fashion/mens/mensleasure/1143986",
                   onSale: "no",
                   params: [
                     {
-                      sizes: ["s", "m", "l"],
+                      size: ["s", "m", "l"],
                     },
                     {
-                      colors: ["green", "silver"],
+                      color: ["green", "silver"],
                     },
                   ],
                 },
@@ -292,18 +292,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 34.22,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "white"],
+              size: ["s", "m", "l"],
+              color: ["black", "white"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/mens/mensleasure/778143986",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "white"],
+                  color: ["black", "white"],
                 },
               ],
             },
@@ -341,18 +341,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 44.3,
-              sizes: ["s", "m", "l"],
-              colors: ["orange", "tiel"],
+              size: ["s", "m", "l"],
+              color: ["orange", "tiel"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/womens/womensouter/10032342228",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["orange", "tiel"],
+                  color: ["orange", "tiel"],
                 },
               ],
             },
@@ -364,18 +364,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 14.3,
-              sizes: ["xs", "s", "m", "l"],
-              colors: ["silver", "gold"],
+              size: ["xs", "s", "m", "l"],
+              color: ["silver", "gold"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/womens/womensouter/10492382834234",
               onSale: "no",
               params: [
                 {
-                  sizes: ["xs", "s", "m", "l"],
+                  size: ["xs", "s", "m", "l"],
                 },
                 {
-                  colors: ["silver", "gold"],
+                  color: ["silver", "gold"],
                 },
               ],
             },
@@ -399,18 +399,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 142,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "brown"],
+              size: ["s", "m", "l"],
+              color: ["black", "brown"],
               inStock: "yes",
               brand: "SuperBrand",
               route: "/fashion/womens/womenssports/15840",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "brown"],
+                  color: ["black", "brown"],
                 },
               ],
             },
@@ -422,18 +422,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 1412,
-              sizes: ["s", "m", "l"],
-              colors: ["black", "white"],
+              size: ["s", "m", "l"],
+              color: ["black", "white"],
               inStock: "yes",
               brand: "BrandnameLorem",
               route: "/fashion/womens/womenssports/115555",
               onSale: "yes",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["black", "white"],
+                  color: ["black", "white"],
                 },
               ],
             },
@@ -457,18 +457,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 112,
-              sizes: ["s", "m", "l"],
-              colors: ["gold"],
+              size: ["s", "m", "l"],
+              color: ["gold"],
               inStock: "yes",
               brand: "MyBrand",
               route: "/fashion/womens/womensleasure/18540008",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["gold"],
+                  color: ["gold"],
                 },
               ],
             },
@@ -480,18 +480,18 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 133,
-              sizes: ["s", "m", "l"],
-              colors: ["blue"],
+              size: ["s", "m", "l"],
+              color: ["blue"],
               inStock: "yes",
               brand: "GoodBrand",
               route: "/fashion/womens/womensleasure/778143986",
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
-                  colors: ["blue"],
+                  color: ["blue"],
                 },
               ],
             },
@@ -541,7 +541,7 @@ const PRODUCT_DATA = {
             //       description:
             //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
             //       price: 133.3,
-            //       sizes: ["s", "m"],
+            //       size: ["s", "m"],
             //       lorem: ["lorem", "ipsum"],
             //       inStock: "yes",
             //       brand: "SuperBrand",
@@ -556,7 +556,7 @@ const PRODUCT_DATA = {
             //       description:
             //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
             //       price: 223.3,
-            //       sizes: ["s", "m"],
+            //       size: ["s", "m"],
             //       lorem: ["lorem", "ipsum"],
             //       inStock: "yes",
             //       brand: "SuperBrand",
@@ -573,7 +573,7 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 34.22,
-              sizes: ["s", "m", "l"],
+              size: ["s", "m", "l"],
               special: ["lorem", "dolor"],
               inStock: "yes",
               brand: "NewBrand",
@@ -581,7 +581,7 @@ const PRODUCT_DATA = {
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m", "l"],
+                  size: ["s", "m", "l"],
                 },
                 {
                   special: ["lorem", "dolor"],
@@ -620,7 +620,7 @@ const PRODUCT_DATA = {
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 133.3,
-                  sizes: ["s", "m"],
+                  size: ["s", "m"],
                   special: ["lorem", "ipsum"],
                   inStock: "yes",
                   brand: "DolorBrand",
@@ -628,7 +628,7 @@ const PRODUCT_DATA = {
                   onSale: "no",
                   params: [
                     {
-                      sizes: ["s", "m"],
+                      size: ["s", "m"],
                     },
                     {
                       special: ["lorem", "ipsum"],
@@ -643,7 +643,7 @@ const PRODUCT_DATA = {
                   description:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
                   price: 223.3,
-                  sizes: ["s", "m"],
+                  size: ["s", "m"],
                   special: ["lorem", "ipsum"],
                   inStock: "yes",
                   brand: "Brandname2",
@@ -651,7 +651,7 @@ const PRODUCT_DATA = {
                   onSale: "yes",
                   params: [
                     {
-                      sizes: ["s", "m"],
+                      size: ["s", "m"],
                     },
                     {
                       special: ["lorem", "ipsum"],
@@ -668,7 +668,7 @@ const PRODUCT_DATA = {
               description:
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
               price: 34.22,
-              sizes: ["s", "m"],
+              size: ["s", "m"],
               special: ["special", "ipsum"],
               inStock: "yes",
               brand: "SuperBraND",
@@ -676,7 +676,7 @@ const PRODUCT_DATA = {
               onSale: "no",
               params: [
                 {
-                  sizes: ["s", "m"],
+                  size: ["s", "m"],
                 },
                 {
                   special: ["special", "ipsum"],
