@@ -14,6 +14,28 @@ import { addItem, removeItem } from "../../redux/actions/cartActions";
 import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
+  const { params } = item;
+  console.log(params);
+  //flatMap solves [0] ---> Object.keys(x)[0]);
+  let test = params ? (
+    params.flatMap((x: any, i: any) => (
+      <>
+        <select
+          key={i}
+          className="form-control"
+          style={{ marginBottom: "1rem" }}
+        >
+          <option>{Object.keys(x)}</option>
+          <option>{Object.values(x).map((it: any) => it[0])}</option>
+          <option>{Object.values(x).map((it: any) => it[1])}</option>
+          <option>{Object.values(x).map((it: any) => it[2])}</option>
+        </select>
+        {Object.values(x)}
+      </>
+    ))
+  ) : (
+    <></>
+  );
   const [quantity, setQuantity] = useState<number>(1);
   const handleOnChange = (action: string) => {
     if (action === "increment") {
@@ -62,6 +84,17 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
                   <dd className="col-sm-9">{item.color}</dd>
                 </>
               )} */}
+              {/* {params.map((item: any, i: any) => (
+                <div key={i}>
+                  {Object.keys(item).map((key) => (
+                    <select className="form-control">
+                      <option>{key}</option>
+                      <option>{item[key]}</option>
+                    </select>
+                  ))}
+                </div>
+              ))} */}
+              {test}
             </dl>
             <hr />
             <div className="row">
