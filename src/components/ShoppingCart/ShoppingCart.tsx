@@ -47,7 +47,7 @@ function ShoppingCart(props: any) {
                 </thead>
                 <tbody>
                   {cartItems.map((cartItem: any) => (
-                    <tr key={cartItem.id}>
+                    <tr key={cartItem.id + Math.random()}>
                       <td>
                         <figure className="itemside">
                           <div className="aside">
