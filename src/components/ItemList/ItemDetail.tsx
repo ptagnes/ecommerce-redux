@@ -15,7 +15,7 @@ import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
   const { params } = item;
-  console.log(params);
+  // console.log(params);
   const [quantity, setQuantity] = useState<number>(1);
   const [cartOptions, setCartOptions] = useState<any>();
   const doOnChange = (
@@ -70,6 +70,11 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
           {Object.values(x).map((it: any, i: any) => (
             <option key={i} value={it[0]}>
               {it[0]}
+            </option>
+          ))}
+          {Object.values(x).map((it: any, i: any) => (
+            <option key={i} value={it[1]}>
+              {it[1]}
             </option>
           ))}
           {/* {Object.values(x)} */}
