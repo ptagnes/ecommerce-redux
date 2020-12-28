@@ -38,25 +38,20 @@ function ItemListSubSubCategory({
       });
     }
   }, [location]);
-  //   console.log("collection");
-  //   console.log(categoryItems);
+  console.log("collection llklklklk");
+  console.log(categoryItems);
+  console.log(sortedItems);
   return (
     <Container fluid>
       <ItemsHeader itemCount={categoryItems.length} items={categoryItems} />
       <span className="srollref" ref={prodRef}></span>
-      <Row>
-        {/* <TransitionGroup component="div" className="row"> */}
-        {itm && itm.length > 0
-          ? Object.values(itm).map((item: any, i) => {
-              return (
-                <Col
-                  key={i}
-                  xs={12}
-                  md={grid ? 6 : 12}
-                  lg={grid ? 6 : 12}
-                  className="product-grid"
-                >
-                  {/* <CSSTransition
+      {/* <Row> */}
+      {/* <TransitionGroup component="div" className="row"> */}
+      {itm && itm.length > 0
+        ? Object.values(itm).map((item: any, i) => {
+            return (
+              <Row key={i}>
+                {/* <CSSTransition
                     timeout={500}
                     // classNames="fade"
                     key={i}
@@ -64,7 +59,33 @@ function ItemListSubSubCategory({
                     classNames="show-filter"
                     unmountOnExit
                   > */}
-                  <ItemView
+                {item.subitems &&
+                  Object.values(item.subitems).map((item: any, i) => {
+                    return (
+                      <Col
+                        key={i}
+                        xs={12}
+                        md={grid ? 6 : 12}
+                        lg={grid ? 6 : 12}
+                        className="product-grid"
+                      >
+                        <ItemView
+                          key={i}
+                          imageUrl={item.imageUrl}
+                          name={item.name}
+                          description={item.description}
+                          link={`/details/${routeTopCategory}/${routeSubCategory}/${routeSubSubCategory}/${item.id}`}
+                          price={item.price}
+                          badgeText={
+                            item.onSale === "yes" ? "ON SALE" : "BUY NOW"
+                          }
+                          onSale={item.onSale}
+                          grid={grid}
+                        />
+                      </Col>
+                    );
+                  })}
+                {/* <ItemView
                     imageUrl={item.imageUrl}
                     name={item.name}
                     description={item.description}
@@ -73,14 +94,14 @@ function ItemListSubSubCategory({
                     badgeText={item.onSale === "yes" ? "ON SALE" : "BUY NOW"}
                     onSale={item.onSale}
                     grid={grid}
-                  />
-                  {/* </CSSTransition> */}
-                </Col>
-              );
-            })
-          : "no results"}
-        {/* </TransitionGroup> */}
-      </Row>
+                  /> */}
+                {/* </CSSTransition> */}
+              </Row>
+            );
+          })
+        : "no results"}
+      {/* </TransitionGroup> */}
+      {/* </Row> */}
     </Container>
   );
 }

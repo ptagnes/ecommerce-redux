@@ -82,10 +82,19 @@ export const selectProduct = (
       if (val.routeName === urlsubCat) {
         val.productList.map((val: any) => {
           if (val.routeName === urlsubsubCat) {
-            const xklj = val.items.find((x: any) => {
-              return x.id.toString() === urlId;
+            let subitems;
+            let items = val.items.find((x: any) => {
+              if (x.subitems !== undefined) {
+                const sub = x.subitems.find((y: any) => {
+                  return y.id.toString() === urlId;
+                });
+                subitems = sub;
+                return sub;
+              } else {
+                return x.id.toString() === urlId;
+              }
             });
-            result = xklj;
+            result = subitems ? subitems : items;
           }
           return "";
         });

@@ -14,6 +14,8 @@ import { addItem, removeItem } from "../../redux/actions/cartActions";
 import { Plus } from "react-bootstrap-icons";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
+  console.log("itemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
+  console.log(item);
   const { params } = item;
   // console.log(params);
   const [quantity, setQuantity] = useState<number>(1);
