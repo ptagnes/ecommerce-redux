@@ -12,11 +12,11 @@ import Image from "react-bootstrap/Image";
 import { Heart, Cart } from "react-bootstrap-icons";
 import { addItem, removeItem } from "../../redux/actions/cartActions";
 import { Plus } from "react-bootstrap-icons";
+import Toast from "../Utils/Toast";
 
 function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
-  console.log("itemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
-  console.log(item);
   const { params } = item;
+  const [show, setShow] = useState(false);
   // console.log(params);
   const [quantity, setQuantity] = useState<number>(1);
   const [cartOptions, setCartOptions] = useState<any>();
@@ -53,6 +53,7 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
         console.log("Product added to cart!");
         addItem(newItem);
       }
+      setShow(true);
     } else {
       alert("Please select options");
     }
@@ -191,6 +192,7 @@ function ItemDetail({ item, addItem }: { item: any; addItem: any }) {
           </div>
         </Col>
       </Row>
+      {show && <Toast />}
     </Container>
   );
 }
